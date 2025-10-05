@@ -1,13 +1,13 @@
-- name: install nginx
+- name: install and start nginx
   hosts: frontend
   bacome: yes
   tasks:
-  - name: configuring nginx
+  - name: install nginx
     ansible.builtin.package:
       name: nginx
-      state: parent
-      
-  - name: starting nginx
+      state: present
+
+  - name: start nginx
     ansible.builtin.service:
       name: nginx
       state: started
