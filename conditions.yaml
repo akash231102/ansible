@@ -8,3 +8,5 @@
     ansible.builtin.debug:
       msg: "{{number}} is greater than 10"
     when: number > 10
+
+# we have to use when keyword in conditions
