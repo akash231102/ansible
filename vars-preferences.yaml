@@ -1,18 +1,21 @@
 - name: variable preferences
   hosts: local
   connection: local
-  # vars:
-  #   name: akash
-  # vars_files:
-  #   course.yaml
-  # vars_prompt:
-  # - name: name
-  #   prompt: what is your user name?
-  #   private: false
+
+  vars:
+    name: akash
+
+  vars_files:
+    - course.yaml
+
+  vars_prompt:
+    - name: name
+      prompt: what is your user name?
+      private: false
+
   tasks:
-  - name: printing variables based on preferences
-    # vars:
-    #   name: pavan
-    ansible.builtin.debug:
-      msg: "name:{{name}}"
-    
+    - name: printing variables based on preferences
+      vars:
+        name: pavan
+      ansible.builtin.debug:
+        msg: "name: {{ name }}"
