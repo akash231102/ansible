@@ -11,6 +11,7 @@
      env: dev
 
     upper: AKASH
+    lower: pavan
 
     listTags:
     - key: Application
@@ -38,3 +39,7 @@
   - name: covert upper to lowerrrr
     ansible.builtin.debug:
       msg: "lowercase: {{ upper | lower }}"
+
+  - name: covert lower to upperrrr
+    ansible.builtin.debug:
+      msg: "uppercase: {{ lower | upper }}"
