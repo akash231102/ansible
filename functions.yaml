@@ -2,8 +2,14 @@
   hosts: local
   connection: local
   become: yes
+
   vars:
-    technologies: Devops,ansible,aws
+    technologies: Devops,ansible,aws  #string
+    
+    tags:
+     Application: payment
+     env: dev
+  
   tasks:
   - name: variables without defining
     ansible.builtin.debug:
@@ -12,3 +18,7 @@
   - name: covert string to list
     ansible.builtin.debug:
      msg: "{{ technologies | split(',') }}"
+
+  - name: covert tags to list
+    ansible.builtin.debug:
+     msg: "lists :{{ tags | dict2items }}
