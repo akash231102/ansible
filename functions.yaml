@@ -2,7 +2,13 @@
   hosts: local
   connection: local
   become: yes
+  vars:
+    technologies: Devops,ansible,aws
   tasks:
   - name: variables without defining
     ansible.builtin.debug:
      msg: "{{ user | default('ramesh') }}"
+
+  - name: covert string to list
+    ansible.builtin.debug:
+     msg: "{{ technologies | split(',') }}"
