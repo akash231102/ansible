@@ -10,7 +10,7 @@
      Application: payment
      env: dev
 
-     upper: AKASH
+    upper: AKASH
 
     listTags:
     - key: Application
