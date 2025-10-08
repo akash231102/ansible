@@ -10,6 +10,8 @@
      Application: payment
      env: dev
 
+     upper: AKASH
+
     listTags:
     - key: Application
       value: payment
@@ -32,3 +34,7 @@
   - name: convert list into map
     ansible.builtin.debug:
       msg: "tag map: {{ listTags | items2dict }}"
+
+  - name: covert upper to lowerrrr
+    ansible.builtin.debug:
+      msg: "lowercase: {{ upper | lower }}"
