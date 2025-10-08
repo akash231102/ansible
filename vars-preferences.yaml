@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   vars:
-  name: akash
+  username: akash
   # vars_files:
   #   course.yaml
   # vars_prompt:
@@ -12,7 +12,7 @@
   tasks:
   - name: printing variables based on preferences
     # vars:
-    #   name: pavan
+    #   username: pavan
     ansible.builtin.debug:
       msg: "name:{{username}}"
     
