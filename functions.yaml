@@ -21,4 +21,4 @@
 
   - name: covert tags to list
     ansible.builtin.debug:
-     msg: "lists :{{ tags | dict2items }}
+     msg: "lists :{{ tags | dict2items }}"
