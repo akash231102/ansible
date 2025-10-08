@@ -9,6 +9,12 @@
     tags:
      Application: payment
      env: dev
+
+    listTags:
+    - key: Application
+      value: payment
+    - key: Environment
+      value: dev
   
   tasks:
   - name: variables without defining
@@ -22,3 +28,7 @@
   - name: covert tags to list
     ansible.builtin.debug:
      msg: "lists :{{ tags | dict2items }}"
+
+  - name: convert list into map
+    ansible.builtin.debug:
+      msg: "tag map: {{ listTags | items2dict }}"
