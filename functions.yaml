@@ -5,4 +5,4 @@
   tasks:
   - name: variables without defining
     ansible.builtin.debug:
-     msg: "{{ name }}"
+     msg: "{{ user }}"
