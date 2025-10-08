@@ -5,12 +5,13 @@
   tasks:
   - name: check user exist or noquota
     ansible.builtin.command: id roboshop
-    register: user_outut
+    register: user_output
     ignore_errors: true
   
   - name: print the output
     ansible.builtin.debug:
-     msg: "{{user_output}}"
+     msg: "{{ user_output }}"
+
 
   - name: create user if user not exist
     ansible.builtin.command: useradd roboshop
