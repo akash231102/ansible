@@ -11,8 +11,8 @@
     private: false
   tasks:
   - name: printing variables based on preferences
-    vars:
-      name: pavan
+    # vars:
+    #   name: pavan
     ansible.builtin.debug:
       msg: "name:{{name}}"
     
