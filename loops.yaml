@@ -4,7 +4,7 @@
   tasks:
   - name: executing loops
     ansible.builtin.debug:
-      msg: "{{item}}"
+      msg: "{{item}}" #item is reserved
     loop:
     - akash
     - pavan
