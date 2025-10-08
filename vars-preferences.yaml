@@ -5,10 +5,10 @@
   name: akash
   # vars_files:
   #   course.yaml
-  vars_prompt:
-  - name: username
-    prompt: what is your user name?
-    private: false
+  # vars_prompt:
+  # - name: username
+  #   prompt: what is your user name?
+  #   private: false
   tasks:
   - name: printing variables based on preferences
     # vars:
