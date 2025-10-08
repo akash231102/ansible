@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   vars:
-  name: akash
+    name: akash
   # vars_files:
   #   course.yaml
   # vars_prompt:
