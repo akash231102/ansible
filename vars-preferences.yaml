@@ -2,17 +2,17 @@
   hosts: local
   connection: local
   vars:
-  username: akash
+  name: akash
   # vars_files:
   #   course.yaml
   # vars_prompt:
-  # - name: username
+  # - name: name
   #   prompt: what is your user name?
   #   private: false
   tasks:
   - name: printing variables based on preferences
     # vars:
-    #   username: pavan
+    #   name: pavan
     ansible.builtin.debug:
-      msg: "name:{{username}}"
+      msg: "name:{{name}}"
     
